@@ -4,13 +4,20 @@
   --primary-white: #fff;
   --primary-orange: #f2643d;
   --primary-dark: #212529;
+  --primary-red: #ef4035;
+  --priimary-hover-red: #f33501;
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif !important;
 }
 
-/**NAVBAR**/
+/**********NAVBAR********************/
+
+nav {
+  z-index: 2;
+}
+
 .logo {
   width: 16.25rem;
   max-height: 4.5rem;
@@ -38,7 +45,7 @@ nav ul li {
 
 .navbar-brand {
   max-width: 17.25rem;
-  padding: 0 !important;
+  padding: 1 !important;
 }
 
 .navbar-nav > li > a:hover,
@@ -47,5 +54,105 @@ nav ul li {
 }
 
 .navbar-icon {
-  color: #fff;
+  color: var(--primary-white);
+}
+
+@media(max-width: 768px) {
+  .navbar-nav {
+    align-items: center;
+  }
+}
+
+/************Header***************/
+
+.header-wrapper {
+  position: relative;
+  background: url(nycBackground.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.main-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.main-info h1 {
+  font-weight: 1000;
+  font-size: 4rem;
+  color: var(--primary-orange);
+  text-transform: uppercase;
+  text-shadow: 0.02rem 0.02rem var(--primary-dark);
+}
+
+@media(max-width: 768px) {
+  .main-info h1 {
+    font-size: 2rem !important;
+  }
+}
+
+/**************Typed Text**********************/
+
+.typed-text {
+  font-weight: 1000;
+  font-size: 3rem;
+  color: var(--primary-white);
+  margin-bottom: 2rem;
+  text-shadow: 0.02rem 0.02rem var(--primary-dark);
+}
+
+@media(max-width: 768px) {
+  .typed-text {
+    font-size: 1.5rem !important;
+  }
+}
+
+/**************Header main offer button******************/
+
+.btn-main-offer {
+  border: 3px solid var(--primary-red);
+  text-transform: uppercase;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  border-radius: 5px;
+  color: var(--primary-white);
+  text-decoration: none;
+  font-weight: 1000;
+  font-size: 1.125rem;
+}
+
+.btn-main-offer:hover {
+  text-decoration: none;
+  background-color: var(--priimary-hover-red);
+  color: var(--primary-white);
+  transition: .1s ease-in-out;
+}
+
+@media(max-width: 768px) {
+  .btn-main-offer {
+    font-size: 1rem !important;
+  }
+}
+
+/************Particles JS***************/
+
+.tsparticles-canvas-el {
+  position: absolute;
+  height: 100vh;
+  z-index: 1;
+}
+
+@media(max-width: 768px) {
+  .particles-canvas {
+    display: none;
+  }
 }
