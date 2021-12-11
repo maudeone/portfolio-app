@@ -13,7 +13,7 @@ const AboutMe = () => {
               <div className="col-lg-6 col-xm-12">
                   <h1 className="about-heading">About Me</h1>
                   <p>
-                    Hello! I am Michael. I have been developing websites for almost 2 years. 
+                    Hello! I am Mike. I have been developing websites for almost 2 years. 
                     I am a Full-Stack Web Developer. Technologies I use include React and Ruby on Rails.
                     Programming languages I am experienced with include HTML/CSS, JavaScript, Ruby, and 
                     I have taken extensive MS CS coursework at New York University in C++.
@@ -24,10 +24,9 @@ const AboutMe = () => {
                     Before developing any webapp, business website, or e-commerce site I have a 
                     ready-made project layout (sketch). 
 
-                    I am ready to do this for you or the company you represent! 
+                    I am ready to do this for you or your company! 
 
-                    In addition to developing websites; I strive to expand my knowledge about the wide 
-                    world of programming/web development on a daily basis.
+                    I strive to expand my knowledge of programming/web development on a daily basis.
                   </p>
               </div>
           </div>

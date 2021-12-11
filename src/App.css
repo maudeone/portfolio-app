@@ -7,6 +7,8 @@
   --primary-red: #ef4035;
   --priimary-hover-red: #f33501;
   --primary-light-grey: #f4f4f4;
+  --primary-grey: #ccd1d9;
+  --primary-dark-grey: #666666;
 }
 
 body {
@@ -148,7 +150,8 @@ nav ul li {
 
 .tsparticles-canvas-el {
   position: absolute;
-  height: 100vh;
+  height: 95vh !important;
+  width: 100vw;
   z-index: 1;
 }
 
@@ -160,6 +163,10 @@ nav ul li {
 
 /*************About Me*****************/
 
+.container {
+  z-index: 2;
+}
+
 .photo-wrap {
   display: flex;
   align-items: center;
@@ -170,7 +177,7 @@ nav ul li {
   width: 16rem;
   border-radius: 50%;
   padding: 0.3rem;
-  border: 2px solid var(--primary-orange);
+  border: 1.5px solid var(--primary-orange);
 }
 
 .about-heading {
@@ -238,6 +245,8 @@ nav ul li {
   margin-bottom: 1.875rem;
   background: var(--primary-white);
   border-radius: 5px;
+  padding-bottom: 1rem;
+  transition: 0.3s ease-in-out;
 }
 
 .services .box:hover {
@@ -255,4 +264,197 @@ nav ul li {
 
 .services .box:hover p {
   color: var(--primary-white);
+}
+
+/*************Experience*****************/
+
+.experience {
+  padding: 0.7rem;
+}
+
+.experience-wrapper {
+  position: relative;
+  padding: 3.125rem 0;
+  overflow: hidden;
+}
+
+.experience h1 {
+  text-transform: uppercase;
+  color: var(--primary-orange);
+}
+
+.experience-wrapper::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  margin-left: -0.0625rem;
+  width: 0.125rem;
+  height: 100%;
+  background-color: var(--primary-grey);
+  z-index: 1;
+}
+
+.timeline-block {
+  width: calc(50% + 0.5rem);
+  display: flex;
+  justify-content: space-between;
+  clear: both;
+}
+
+.timeline-block-right {
+  float: right;
+}
+
+.timeline-block-left {
+  float: left;
+  direction: rtl;
+}
+
+.marker {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.3125rem solid var(--primary-dark);
+  background: var(--primary-orange);
+  margin-top: 0.625rem;
+  z-index: 3;
+}
+
+.timeline-content {
+  width: 95%;
+  padding: 0 0.9375rem;
+  color: var(--primary-dark-grey);
+  direction: ltr;
+}
+
+.timeline-content h3 {
+  margin-top: 0.3125rem;
+  color: var(--primary-red);
+  font-weight: 900;
+}
+
+@media(max-width: 768px) {
+  .experience .container {
+    padding-left: 0;
+  }
+
+  .experience-wrapper::before {
+    left: 0.5rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .timeline-block-right {
+    float: none;
+    width: 100%;
+  }
+
+  .timeline-block-left {
+    float: none;
+    direction: ltr;
+    width: 100%;
+  }
+}
+
+/*************Portfolio*****************/
+
+.portfolio-wrapper {
+  background: var(--primary-light-grey);
+  padding: 3rem 0;
+}
+
+.portfolio-image {
+  width: 15rem !important;
+  height: 9rem;
+  border: 1.5px solid var(--primary-orange);
+  padding: 0.5rem 0.5rem;
+}
+
+.portfolio-image-box {
+  position: relative;
+  margin: 1rem;
+}
+
+.image-box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*************Overflow Box*****************/
+
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: var(--primary-dark);
+  width: 15rem;
+  height: 9rem;
+  top: 0;
+  border: 1.5px solid var(--primary-orange);
+  cursor: pointer;
+}
+
+.portfolio-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio-icon {
+  position: absolute;
+  opacity: 0;
+  margin-top: 3.6rem;
+  margin-left: -8rem;
+  color: var(--primary-orange);
+  font-size: 1.5rem;
+}
+
+.portfolio-image-box:hover .portfolio-icon {
+  opacity: 70%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/************Portfolio Popup******************/
+
+.portfolio-image-popupbox {
+  max-height: 70vh !important;
+  width: 45rem;
+  padding: 0 0.5rem;
+}
+
+.hyper-link {
+  cursor: pointer;
+  color: var(--primary-orange);
+}
+
+.hyper-link:hover {
+  color: var(--primary-red);
+}
+
+/************Media******************/
+
+@media(max-width: 850px) {
+  .portfolio-image-popupbox {
+    width: 100%;
+  }
+}
+
+@media(max-height: 570px) {
+  .popupbox-wrapper {
+    height: 100% !important;
+  }
+
+  .portfolio-image-popupbox {
+    width: 60%;
+  }
+}
+
+@media(max-height: 280px) {
+  .popupbox-wrapper {
+    height: 90% !important;
+  }
+
+  .portfolio-image-popupbox {
+    width: 30%;
+  }
 }
