@@ -10,6 +10,7 @@
   --primary-grey: #ccd1d9;
   --primary-dark-grey: #666666;
   --primary-transparent-black: rgba(0,0,0,0.7);
+  --primary-green: green;
 }
 
 body {
@@ -361,8 +362,7 @@ nav ul li {
 
 .portfolio-wrapper {
   background: var(--primary-light-grey);
-  padding: 3rem 0;
-  margin-bottom: 4rem;
+  padding: 1.5rem 0 5.5rem 0;
 }
 
 .portfolio-image {
@@ -511,4 +511,113 @@ nav ul li {
 .carousel .slide img {
   width: 10rem !important;
   border-radius: 50%;
+}
+
+/************Contact******************/
+
+.contact {
+  background: rgba(52, 58, 64);
+  padding: 3rem 0;
+}
+
+.contact h1 {
+  color: var(--primary-orange);
+  padding: 1.3rem 0;
+  text-transform: uppercase;
+}
+
+.contact p {
+  color: var(--primary-light-grey);
+  font-size: 1.2rem;
+}
+
+/************Contact Inputs******************/
+
+.contact input, .contact textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  resize: none;
+  border: 0;
+  border-bottom: 0.125rem solid var(--primary-dark-grey);
+  border-radius: 0;
+  color: var(--primary-orange);
+  outline: 0 !important;
+  box-shadow: none !important;
+  margin-bottom: 1rem;
+  padding-left: 0 !important;
+}
+
+.contact .container {
+  padding: 4rem 0;
+}
+
+.contact input:focus, .contact textarea:focus {
+  background: transparent;
+  color: var(--primary-orange);
+  border-bottom: 0.125rem solid var(--primary-dark-grey);
+}
+
+.contact textarea {
+  height: 12.23rem;
+}
+
+.contact-btn {
+  margin: 1rem 0 0 0;
+  width: 50% !important;
+  background: none;
+}
+
+.btn-container {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  position: relative;
+  width: 0;
+  height: 0.125rem;
+  background: var(--primary-orange);
+  display: inline-block;
+  top: -0.8rem;
+}
+
+input:focus+.line, textarea:focus+.line {
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+input.form-control, textarea.form-control {
+  margin: -0.3rem 0;
+}
+
+.error-message {
+  color: var(--primary-white);
+  background: var(--primary-red);
+  text-align: left;
+}
+
+.success-message {
+  font-weight: 900;
+  color: var(--primary-green);
+}
+
+@media(max-width: 768px) {
+  .contact {
+    overflow-x: hidden;
+  }
+
+  .contact .container {
+    padding: 0 0.75rem;
+  }
+
+  .contact p {
+    padding: 0 0.75rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
 }
