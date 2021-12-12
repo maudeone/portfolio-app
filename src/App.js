@@ -9,6 +9,7 @@ import Experience from "./components/Experience";
 import Portfolio from "./components/Portfolio";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         params={{
           particles: {
             number: {
-              value:55,
+              value:40,
               density: {
                 enable:true,
                 value_area:900
@@ -42,6 +43,7 @@ function App() {
       <Portfolio />
       <Testimonials />
       <Contact />
+      <Footer />
     </div>  
   );
 }
