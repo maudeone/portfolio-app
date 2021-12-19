@@ -19,7 +19,7 @@ function App() {
         params={{
           particles: {
             number: {
-              value:40,
+              value:42,
               density: {
                 enable:true,
                 value_area:900
