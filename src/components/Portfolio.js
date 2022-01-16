@@ -1,5 +1,6 @@
 import React from "react";
 import Calculator from "../images/Calculator.jpg";
+import Student from "../images/Students.png";
 import TjPizza from "../images/TigersJawPizza.jpg";
 import TwitterClone from "../images/TwitterClone.png";
 import WeatherApi from "../images/WeatherAPI.jpg";
@@ -10,7 +11,7 @@ import "react-popupbox/dist/react-popupbox.css";
 
 const Portfolio = () => {
 
-  //Calculator
+  /* Calculator
   const openPopupboxCalc = () => {
     const content = (
     <>
@@ -35,6 +36,36 @@ const Portfolio = () => {
     titleBar: {
       enable: true,
       text: "Calculator project."
+    },
+    fadeIn: true,
+    fadeInSpeed: 500
+  } */
+
+  //Student API
+  const openPopupboxStudentApi = () => {
+    const content = (
+    <>
+      <img className="portfolio-image-popupbox" src={Student} alt="Student API project" />
+      <p>Student API App; made with React, filters through a free remote API by search parameters.</p>
+      <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://maudeone.github.io/student-profile-4165/")}>
+      https://maudeone.github.io/student-profile-4165/</a>
+    </>
+    )
+    PopupboxManager.open({ content });
+      PopupboxManager.update({
+        content,
+        config: {
+          titleBar: {
+            text: "Student API project.",
+          },
+        }
+      });
+  }
+
+  const popupboxConfigStudentApi = {
+    titleBar: {
+      enable: true,
+      text: "Student API project."
     },
     fadeIn: true,
     fadeInSpeed: 500
@@ -146,8 +177,8 @@ const Portfolio = () => {
               <div className="overflow"></div>
               <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
             </div>
-            <div className="portfolio-image-box" onClick={openPopupboxCalc}>
-              <img className="portfolio-image" src={Calculator} alt="Calculator Project" />
+            <div className="portfolio-image-box" onClick={openPopupboxStudentApi}>
+              <img className="portfolio-image" src={Student} alt="Student API Project" />
               <div className="overflow"></div>
               <FontAwesomeIcon className="portfolio-icon" icon={faSearchPlus} />
             </div>
@@ -158,7 +189,7 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        <PopupboxContainer {...popupboxConfigCalc} />
+        <PopupboxContainer {...popupboxConfigStudentApi} />
         <PopupboxContainer {...popupboxConfigWeatherApi} />    
         <PopupboxContainer {...popupboxConfigTjPizza} />
         <PopupboxContainer {...popupboxConfigTwitterClone} />      
