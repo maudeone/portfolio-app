@@ -47,8 +47,8 @@ const Portfolio = () => {
     <>
       <img className="portfolio-image-popupbox" src={Student} alt="Student API project" />
       <p>Student API App; made with React, filters through a free remote API by search parameters.</p>
-      <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://maudeone.github.io/student-profile-4165/")}>
-      https://maudeone.github.io/student-profile-4165/</a>
+      <b>GitHub:</b> <a className="hyper-link" onClick={() => window.open("https://maudeone.github.io/student-api-filterlist/")}>
+      https://maudeone.github.io/student-api-filterlist/</a>
     </>
     )
     PopupboxManager.open({ content });
